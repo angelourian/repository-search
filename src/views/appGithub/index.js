@@ -67,13 +67,11 @@ const GithubPage = ({
   const [rowsPerPage, setRowsPerPage] = useState(25);
 
   const handleChangePage = (_, newPage) => {
-    console.log('go here', newPage);
     setPage(newPage);
     actionFetchRepository(currentFilter, rowsPerPage, newPage);
   };
 
   const handleChangeRowsPerPage = (event) => {
-    console.log('go here~', parseInt(event.target.value, 10));
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
     actionFetchRepository(currentFilter, parseInt(event.target.value, 10), 0);
