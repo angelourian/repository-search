@@ -1,5 +1,7 @@
+import appRepository from './repository';
+
 const reducers = {
-  appReducer: { sample: {}}
+  appRepository
 };
 
 export default reducers;
